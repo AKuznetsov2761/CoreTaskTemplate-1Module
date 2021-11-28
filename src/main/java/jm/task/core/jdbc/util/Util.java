@@ -10,8 +10,8 @@ import java.util.Properties;
 public class Util {
 
     private final String USER = "root";
-    private final String PASS = "L;tn<hfqyc";
-    private final String URL = "jdbc:mysql://localhost:3306/kata-1-1-3?autoReconnect=true&useSSL=false";
+    private final String PASS = "L;tn<hfqyc123";
+    private final String URL = "jdbc:mysql://localhost:3306/new_schema?autoReconnect=true&useSSL=false";
     private Connection connection;
 
     public Util () {
