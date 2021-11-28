@@ -1,5 +1,29 @@
 package jm.task.core.jdbc.util;
 
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
+
+
 public class Util {
-    // реализуйте настройку соеденения с БД
+
+    private final String USER = "root";
+    private final String PASS = "L;tn<hfqyc";
+    private final String URL = "jdbc:mysql://localhost:3306/kata-1-1-3?autoReconnect=true&useSSL=false";
+    private Connection connection;
+
+    public Util () {
+        try {
+            connection = DriverManager.getConnection(URL, USER, PASS);
+        } catch (SQLException ex) {
+            System.err.println("Ошибка соединения : " + ex);
+        }
+    }
+
+    public Connection getConnection () {
+        return connection;
+    }
+
 }
